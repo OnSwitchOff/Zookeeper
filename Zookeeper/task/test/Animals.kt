@@ -112,19 +112,3 @@ const val rabbit = """Switching on the camera in the rabbit habitat...
  ]\      _\    /"\
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!"""
-
-val animals = arrayOf(camel, lion, deer, goose, bat, rabbit)
-val ask = "Please enter the number of the habitat you would like to view:"
-val last = "See you later!"
-
-fun main() {
-    while (true) {
-        println(ask)
-        val input = readLine()!!
-        when  {
-            input =="exit" -> break;
-            Regex("[0-5]").matches(input) -> println(animals[input.toInt()])
-        }
-    }
-    println(last)
-}
